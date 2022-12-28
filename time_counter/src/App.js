@@ -3,16 +3,22 @@ import Counter from "./comps/counter";
 import "./App.css";
 
 class App extends Component {
-  // myDate = "2030-01-01";
+  state = {
+    myDate: "2025-05-05",
+  };
+  changDate = () => {
+    this.setState({ myDate: "2021-01-10" });
+    // this.forceUpdate();
+  };
   render() {
     return (
       <div className="App">
-        {/* <h2>Count down to {this.myDate}</h2>
-        <h3>Days: XX</h3> */}
         {/* It will be in own component */}
-        <Counter />
+        <Counter appDate={this.state.myDate} />
         <input defaultValue="monkeys" />
-        <button className="btn btn-success">change</button>
+        <button onClick={this.changDate} className="btn btn-success">
+          change
+        </button>
       </div>
     );
   }

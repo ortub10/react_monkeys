@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  myDate = "2030-01-01";
   render() {
-    return <div>Counter work</div>;
+    return (
+      <div>
+        <h2>Count down to {this.props.appDate}</h2>
+        <h3>Days: XX</h3>
+      </div>
+    );
   }
 }
 
