@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-// import Counter from "./comps/counter";
+import Counter from "./comps/counter";
 import "./App.css";
-import MyInput from "./otherComps/myInput";
+// import MyInput from "./otherComps/myInput";
 
 class App extends Component {
   state = {
@@ -14,13 +14,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MyInput />
+        {/* <MyInput /> */}
         {/* It will be in own component */}
-        {/* <Counter appDate={this.state.myDate} />
+        <Counter appDate={this.state.myDate} />
         <input defaultValue="monkeys" />
         <button onClick={this.changDate} className="btn btn-success">
           change
-        </button> */}
+        </button>
       </div>
     );
   }
